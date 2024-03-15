@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal-wrapper">
+      <div class="modal-window">
+        <div class="modal-window-content">
+          <button class="modal-close-btn">x</button>
+          <p class="modal-title">Привет,как тебя зовут?</p>
+          <input type="text" class="modal-input" placeholder="Имя" />
+          <button class="modal-remember-btn">Запомнить</button>
+        </div>
+      </div>
+    </div>
+    <main class="todo-list">
+      <div class="main-wrapper">
+        <h1 class="title" id="1">MY LIST</h1>
+        <section class="todo-app">
+          <div class="actions">
+            <input
+              type="text"
+              class="task-input"
+              name=""
+              id="taskInputId"
+              placeholder="  У тебя всё получится! <3" />
+            <button class="btn create-task-btn">Записать</button>
+          </div>
+          <ul class="list"></ul>
+        </section>
+        <p class="contact">by @alexkor</p>
+      </div>
+    </main>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-family: roboto-bold;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: white;
+  -webkit-text-stroke: 2px rgba(189, 83, 255, 0.378);
+}
+.todo-app {
+  width: 400px;
+  padding: 10px 20px;
+  border: 5px solid rgba(189, 83, 255, 0.378);
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.actions > input {
+  width: 280px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-family: roboto-bold;
+  color: rgb(168, 35, 250);
+}
+
+.create-task-btn {
+  width: 80px;
+  border: 2px solid rgba(189, 83, 255, 0.378);
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: rgb(168, 35, 250);
+  transition: background-color 0.2s ease-in-out;
+}
+.actions > button:active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(168, 35, 250);
+}
+
+.list {
+  list-style-type: none;
+  margin: 10px 0;
+  padding-left: 0;
+  transition: all ease-in 1s;
+}
+.list-task {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.292);
+  border-radius: 10px;
+  color: rgb(168, 35, 250);
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  transition: 0.5s ease;
+  word-wrap: break-word;
+  width: 380px;
+}
+.list-task-done {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(168, 35, 250);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  transition: 0.5s ease;
+}
+.list > li:hover {
+  background-color: rgba(168, 35, 250, 0.233);
+}
+.list-task-checkbox {
+  margin: 0 8px 0 8px;
+  min-width: 25px;
+  min-height: 25px;
+}
+.list-task-checkbox:checked {
+  background-color: pink; /* Изменение цвета фона чекбокса при выборе */
+}
+.modal-wrapper {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.362);
+}
+.modal-window {
+  margin-top: 200px;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  height: 300px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  border: 5px solid rgba(189, 83, 255, 0.378);
+}
+.closed {
+  display: none;
+}
+.opened {
+  display: flex;
+}
+.modal-window-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  border-radius: 5px;
+  background-color: rgba(189, 83, 255, 0.378);
+  color: white;
+  border: 3px solid rgba(189, 83, 255, 0.378);
+  transition: 0.2s;
+}
+.modal-close-btn:hover {
+  cursor: pointer;
+}
+.modal-close-btn:active {
+  background-color: rgb(189, 83, 255);
+  border: 3px solid rgba(246, 232, 255, 0.827);
+  color: white;
+}
+.modal-title {
+  align-self: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.modal-input {
+  height: 25px;
+  margin-bottom: 20px;
+  width: 80%;
+  align-self: center;
+  font-family: roboto-bold;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 3px solid rgba(189, 83, 255, 0.378);
+  outline: none;
+}
+
+.modal-remember-btn {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  align-self: center;
+  border-radius: 5px;
+  background-color: rgba(189, 83, 255, 0.378);
+  color: white;
+  border: 3px solid rgba(189, 83, 255, 0.378);
+  transition: 0.2s;
+}
+.modal-remember-btn:hover {
+  cursor: pointer;
+}
+.modal-remember-btn:active {
+  background-color: rgb(189, 83, 255);
+  border: 3px solid rgba(246, 232, 255, 0.827);
+  color: white;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
